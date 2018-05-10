@@ -1,0 +1,27 @@
+<ion-content padding>
+  <div class="title-container">
+    <p class="brand-title">ECO</p>
+    <p class="brand-subtitle">l ó g i c a</p>
+    <hr color="primary" class="brand-line">
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-input type="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Confirm Password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div class="buttons">
+    <div class="button-default" (click)="register(user)">
+      <p class="text-myriad">Enviar</p>
+      <hr class="line">
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,48 @@
+page-register {
+    .brand-title{
+        font-family: TwCentMT;
+        text-align: center;
+        font-size: 190px;
+        margin: 0;
+        color: #3d3d3d;
+    }
+    .brand-subtitle{
+        font-family: Raleway;
+        text-align: center;
+        font-size: 47px;
+        margin: 0;
+        color: #3d3d3d;
+        padding-top: -30px;
+    }
+    .brand-line{
+        width: 50%;   
+        height: 4px; 
+        background: color($colors, primary);
+    }    
+    .button-default{
+        position: relative;
+        width: 40%;
+        height:40px;
+        text-align: center;
+        vertical-align: middle;
+        background : #BF0B00;
+        background : rgba(191, 11, 0, 1);
+        margin: 0 auto;        
+        .text-myriad{  
+            position: relative;                      
+            font-weight: 700;        
+            font-family : Raleway;
+            font-size : 14px;
+            color : #FFEBAC;
+            color : rgba(255, 235, 172, 1);            
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .line{
+            width: 80%;   
+            height: 3px; 
+            background : #FFEBAC;
+            background : rgb(231, 206, 122);
+        }
+    }  
+}
