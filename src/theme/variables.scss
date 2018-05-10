@@ -34,8 +34,8 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #BF0B00,
+  secondary:  #FFEBAC,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
@@ -52,8 +52,8 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
-
-
+$checkbox-md-icon-background-color-off: #FFEBAC;
+$checkbox-md-icon-border-width: 0;
 
 
 // App Windows Variables
