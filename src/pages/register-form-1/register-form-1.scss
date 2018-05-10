@@ -1,0 +1,38 @@
+page-register-form-1 {
+    ion-title{
+        text-align: center;
+        color: color($colors,secondary);
+    }
+    .question{
+        height: fit-content;
+        width: 90%;
+        margin: 0 auto 10px auto;
+        background: color($colors,secondary);
+        color: color($colors,primary);
+        font-family: Raleway;
+        font-weight: 700;
+        font-size: 10px;
+        padding: 4px;        
+    }
+    ion-radio{       
+        background-color: color($colors,secondary);
+        border-radius: 50%;            
+    }  
+    .radio-md .radio-icon{
+        border-color: color($colors,secondary);
+    }
+    ion-item{
+        font-size: 12px !important;
+        color: color($colors,primary) !important;
+    }        
+    ion-checkbox{
+        background: color($colors,secondary) !important;
+    }    
+    .slide-zoom{
+        height: 100%;
+        width: 100%;
+    }    
+    ion-scroll{
+        height: 100%;
+    }
+}
