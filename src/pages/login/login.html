@@ -1,0 +1,18 @@
+<ion-content padding>
+  <div class="title-container">
+    <p class="brand-title">ECO</p>
+    <p class="brand-subtitle">l ó g i c a</p>
+    <hr color="primary" class="brand-line">
+  </div>
+  <ion-item>
+    <ion-input type="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+
+  <div class="button-default" (click)="login(user)">
+    <p class="text-myriad">Iniciar sesión</p>
+    <hr class="line">
+  </div>
+</ion-content>

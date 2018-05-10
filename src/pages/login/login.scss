@@ -1,0 +1,56 @@
+page-login {
+    .title-container{
+        position: relative;
+        margin-bottom: 50px;
+        .brand-title{
+            font-family: TwCentMT;
+            text-align: center;
+            font-size: 190px;
+            margin: 0;
+            color: #3d3d3d;
+        }
+        .brand-subtitle{
+            font-family: Raleway;
+            text-align: center;
+            font-size: 47px;
+            margin: 0;
+            color: #3d3d3d;
+            padding-top: -30px;
+        }
+        .brand-line{
+            width: 50%;   
+            height: 4px; 
+            background: color($colors, primary);
+        } 
+    }
+       
+    .button-default{
+        position: relative;
+        width: 50%;
+        height:40px;                
+        background : #BF0B00;
+        background : rgba(191, 11, 0, 1);
+        text-align: center;
+        margin: 0 auto;
+        top: 50px;
+        .text-myriad{  
+            position: absolute;                      
+            font-weight: 700;        
+            font-family : Raleway;
+            font-size : 18px;
+            color : #FFEBAC;
+            color : rgba(255, 235, 172, 1);   
+            left: 10%;         
+            transform: translateY(-50%);
+        }
+        .line{
+            position: absolute;
+            width: 83%;   
+            height: 3px; 
+            background : #FFEBAC;
+            background : rgb(231, 206, 122);
+           top: 50%;
+           left: 10%;
+        }
+    }      
+}
