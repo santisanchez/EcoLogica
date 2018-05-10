@@ -14,3 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face {
+        font-family: Raleway;
+        src: url(../assets/fonts/raleway/Raleway-Medium.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: Merriweather;
+        src: url(../../assets/fonts/Merriweather/Merriweather-Light.ttf) format('truetype');
+    }
+    @font-face{
+        font-family: TwCentMT;
+        src: url(../assets/fonts/tw-cen-mt-condensed/tccm___.ttf);
+    }
