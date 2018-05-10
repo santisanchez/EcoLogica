@@ -1,14 +1,17 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="title-container">
+    <p class="brand-title">ECO</p>
+    <p class="brand-subtitle">l ó g i c a</p>
+    <hr color="primary" class="brand-line">
+  </div>
+  <div class="buttons">
+    <div class="button-default" [navPush]="login">
+      <p class="text-myriad">Inicia Sesión</p>
+      <hr class="line">
+    </div>
+    <div class="button-default" [navPush]="register">
+      <p class="text-myriad">Regístrate</p>
+      <hr class="line">
+    </div>
+  </div>
 </ion-content>
