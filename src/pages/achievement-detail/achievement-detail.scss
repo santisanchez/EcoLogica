@@ -1,0 +1,103 @@
+page-achievement-detail {        
+    .top-bar{            
+        display:flex;
+        align-items: center;            
+        background: color($colors,primary);                
+        margin: 0 0 15px 0;
+        width: 100%;     
+        height: 40px;   
+        .view-name{     
+            position: relative;
+            right: 5%;   
+            font-family : Raleway;
+            font-weight : bold;
+            font-size : 18px;
+            color : #FFEBAC;
+            color : rgb(255, 235, 172);
+            margin: 0 auto;
+        }
+        .back-arrow{            
+            background: url('../../assets/imgs/back-arrow.png');
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-left: 5px;        
+        }        
+    }
+    .image-background{                       
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        margin: 0 auto;
+        background: color($colors,primary);            
+        img{               
+            width: 140px;
+            height: 150px;   
+            margin: 0 auto;            
+        }
+    }
+    .achievement-title{
+        color: color($colors,primary);
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .progress{
+        position: relative;
+        width: 50%;
+        height: 30px;        
+        margin: 0 auto;
+        background: color($colors,secondary);        
+        .progress-bar{
+            position: relative;            
+            width: 20%;
+            height: 30px;
+            background: color($colors,primary);                                       
+        }
+        .text{   
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            font-family: Raleway;
+            font-weight: bold;
+            font-size: 14px;      
+            color: color($colors,secondary);
+            z-index: 1;
+        }  
+        .progress-bar::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 100%;
+            border-width: 30px 0 0 30px;
+            border-color: color($colors,primary);
+            border-style:solid;
+            border-top-color:transparent;
+            border-bottom-color:transparent;
+            border-right-color:transparent;
+        }
+    }
+    
+    .start-achievement{
+        position: relative;        
+        width:40%;
+        height: 60px;
+        background: color($colors,primary);
+        margin: 10px auto;        
+        .text{            
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 30%;                 
+            font-family: Raleway;
+            font-weight: bold;
+            text-align: center;
+            color:color($colors,secondary);
+        }        
+    }
+}

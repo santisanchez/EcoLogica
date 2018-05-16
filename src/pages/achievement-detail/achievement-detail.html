@@ -1,0 +1,20 @@
+<div class="top-bar">
+	<div class="back-arrow" navPop></div>
+	<span class="view-name">LOGROS</span>
+</div>
+<div class="image-background">
+	<img [src]="achievement.image">
+</div>
+<p class="achievement-title">{{achievement.title}}</p>
+<div class="progress">
+	<div class="progress-bar">
+	</div>
+	<span class="text">En progreso</span>
+	<div class=""></div>
+</div>
+
+<div class="start-achievement" *ngIf="!achievement.progress.started" (click)="startAchievement()">
+	<div class="text">
+		Empezar Logro
+	</div>
+</div>
