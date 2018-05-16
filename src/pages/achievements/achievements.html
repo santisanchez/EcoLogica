@@ -1,0 +1,25 @@
+<ion-content>
+
+  <div class="top-bar">
+    <div class="back-arrow" navPop></div>
+    <span class="view-name">LOGROS</span>
+    <hr class="line">
+    <p class="view-explain">
+      Para desbloquear un logro, debes realizar la accion ligada a este durante 21 días consecutivos. Si fallas, romperás tu racha
+      y tendrás que volver a empezar.
+    </p>
+  </div>
+  <div padding>
+    <div *ngFor="let item of achievements;let i=index">
+      <div [ngClass]="isRed(i) ? 'item-red' : 'item-veige'" (click)="showAchievementDetail(item,i)">
+        <div class="item-text" *ngIf="!isRed(i)">
+          <span>{{item.title}}</span>
+        </div>
+        <img src="{{item.image}}" alt="">
+        <div class="item-text" *ngIf="isRed(i)">
+          <span>{{item.title}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,96 @@
+page-achievements {    
+    .view-name
+    {
+        position: relative;
+        top: 15%;
+        font-family : Raleway;
+        font-weight : bold;
+        font-size : 45px;
+        color : #FFEBAC;
+        color : rgb(255, 235, 172);
+    }
+    .top-bar{        
+        position: relative;
+        background: color($colors,primary);
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        height: 200px;                
+        .line{
+            position: relative;            
+            height: 4px;
+            width: 100%;
+            top: 8%;
+            background: color($colors,secondary);
+        }
+        
+    }
+    .view-explain{
+        position: relative;
+        font-size: 13px;
+        top: 5%;
+        width:80%;
+        text-align: left;
+        color: color($colors,secondary);   
+        margin: 0 auto;                                      
+    }
+    .back-arrow{
+        position: relative;
+        top: 10px;
+        left: 10px;
+        background: url('../../assets/imgs/back-arrow.png');
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;        
+    }
+    .item-red{
+        background: color($colors,primary);        
+        height: 100px;
+        width: 100%;          
+        display: flex;
+        align-items: center;               
+        img{                          
+            width: 70px;
+            height: 70px; 
+            margin: 15px;                                   
+        }       
+        .item-text{            
+            width: 60%;   
+            float: right;             
+            text-align: right;                 
+            span{                       
+                position: relative;                                       
+                color: color($colors,secondary);            
+                font-family: Raleway;
+                font-weight: bold;
+                font-size: 12px;             
+            }  
+        }                  
+                      
+    }
+    .item-veige{
+        background: color($colors,secondary);        
+        height: 100px;
+        width: 100%;   
+        display: flex;
+        align-items: center;      
+        img{                    
+            width: 70px;
+            height: 70px;  
+            margin: 15px;          
+        }
+        .item-text{ 
+            width: 100%;  
+            margin-left: 10px;                      
+            span{
+                position: relative;
+                color: color($colors,primary);            
+                font-family: Raleway;
+                font-weight: bold;
+                font-size: 12px;                            
+            }
+        }
+    }
+
+}
