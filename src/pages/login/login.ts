@@ -1,14 +1,8 @@
-import { AngularFireAuth } from 'angularfire2/auth';
+import { MainPage } from './../main/main';
 import { User } from './../../modules/user';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { UserProvider } from '../../providers/user/user';
 
 @IonicPage()
 @Component({
@@ -17,21 +11,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  user = {} as User;
+  user: any;
+  main: any = MainPage;
 
-  constructor(private afAuth: AngularFireAuth,
+  constructor(private userProvider: UserProvider,
     public navCtrl: NavController, public navParams: NavParams) {
+    this.user = {};
   }
 
-  async login(user: User) {
-    try {
-      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
-      console.log(result);
-
-    } catch (e) {
-      console.error(e);
-    }
+  public login(user) {
+    this.userProvider.login(user).then(
+      () => {
+        this.navCtrl.push(this.main)
+      }, (reason) => {
+        console.log("the reason of rejection was: " + reason);
+      });
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

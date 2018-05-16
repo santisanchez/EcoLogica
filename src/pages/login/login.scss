@@ -1,13 +1,12 @@
 page-login {
-    .title-container{
-        position: relative;
-        margin-bottom: 50px;
+    .title-container{        
         .brand-title{
             font-family: TwCentMT;
             text-align: center;
-            font-size: 190px;
-            margin: 0;
+            font-size: 190px;                        
             color: #3d3d3d;
+            margin: 0;
+            line-height: 130px;
         }
         .brand-subtitle{
             font-family: Raleway;
@@ -21,7 +20,7 @@ page-login {
             width: 50%;   
             height: 4px; 
             background: color($colors, primary);
-        } 
+        }
     }
        
     .button-default{
