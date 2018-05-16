@@ -1,0 +1,24 @@
+<ion-content>
+  <div class="top-bar">
+    <span class="view-name">HOME</span>
+  </div>
+  <div class="profile-info" *ngIf="user">
+    <div class="image-background">
+      <img [src]="user.photoUrl" (click)="searchImage()">
+    </div>
+    <p class="user-name">{{user.username}}</p>
+  </div>
+  <input id="file-input" class="file-input" name="file-input" type="file" accept=".jpg, .jpeg, .png" (change)="changeListener($event)">
+  <div class="navigation-buttons">
+    <div class="main-button" [navPush]="achievements">
+      <div class="text">
+        Logros
+      </div>
+    </div>
+    <div class="main-button">
+      <div class="text">
+        Tips
+      </div>
+    </div>
+  </div>
+</ion-content>
