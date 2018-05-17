@@ -10,15 +10,40 @@
   </div>
   <input id="file-input" class="file-input" name="file-input" type="file" accept=".jpg, .jpeg, .png" (change)="changeListener($event)">
   <div class="navigation-buttons">
-    <div class="main-button" [navPush]="achievements">
-      <div class="text">
-        Logros
-      </div>
-    </div>
-    <div class="main-button">
-      <div class="text">
-        Tips
-      </div>
-    </div>
+    <ion-grid>
+      <ion-row>
+        <div class="main-button-red" [navPush]="achievements">
+          <div class="text">
+            Logros
+          </div>
+          <hr>
+        </div>
+        <div class="main-button-red">
+          <div class="text">
+            Diario
+          </div>
+          <hr>
+        </div>
+      </ion-row>
+      <ion-row>
+        <div class="main-button-veige">
+          <div class="text">
+            Progreso
+          </div>
+          <hr>
+        </div>
+        <div class="main-button-veige">
+          <div class="text">
+            Tips
+          </div>
+          <hr>
+        </div>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
+<ion-footer>
+  <div class="top-bar">
+
+  </div>
+</ion-footer>

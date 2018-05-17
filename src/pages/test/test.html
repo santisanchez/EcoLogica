@@ -1,0 +1,21 @@
+<ion-content padding>
+  <label>Login</label>
+  <ion-item>
+    <ion-input type="email" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+  <div class="button-default" (click)="login(user)">
+    <p class="text-myriad">Iniciar sesión</p>
+    <hr class="line">
+  </div>
+  <button (click)="getImageUrl()">Send</button>
+  <ul>
+    <li>
+      <!-- {{ user | async | json }} -->
+    </li>
+  </ul>
+  <img id="preview" [src]="user.imageUrl" />
+  <input name="myFile" type="file" name="profile_pic" accept=".jpg, .jpeg, .png" (change)="changeListener($event)">
+</ion-content>
