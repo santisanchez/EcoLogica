@@ -86,3 +86,8 @@ $checkbox-md-icon-border-width: 0;
 
 @import "roboto";
 @import "noto-sans";
+
+
+// Font Awesome
+$fa-font-path: $font-path;
+@import "font-awesome";
