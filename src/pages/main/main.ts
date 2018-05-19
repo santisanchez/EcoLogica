@@ -1,9 +1,10 @@
+import { User } from './../../modules/user';
 import { AchievementsPage } from './../achievements/achievements';
 import { HomePage } from './../home/home';
-import { UserProvider } from './../../providers/user/user';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireObject } from 'angularfire2/database';
+import { FirebaseUserProvider } from '../../providers/firebase-user/firebase-user';
 
 @IonicPage()
 @Component({
@@ -16,17 +17,16 @@ export class MainPage {
   achievements: any = AchievementsPage;
 
   uid: any = "";
-  public user: any;
+  public user: User;
   public userRef: AngularFireObject<any>;
   public fileInput: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private userProvider: UserProvider) {
+    private firebaseUser: FirebaseUserProvider) {
+    if (FirebaseUserProvider._userDB == null) {
+      this.user = { username: "", profilePhoto: "", achievements: [] };
+    }
     this.verifyAuthentication();
-  }
-
-  ionViewDidLoad() {
-
   }
 
   ionViewDidEnter() {
@@ -34,21 +34,12 @@ export class MainPage {
   }
 
   verifyAuthentication() {
-    if (this.userProvider.authenticated()) {
-      this.userProvider.getUser().subscribe((response) => {
-        this.user = response;
-        this.uid = this.userProvider.getUid();
-      }, (error) => {
-        console.error("Failed to get user" + error);
-      });
-    } else {
-      this.navCtrl.push(this.home);
-    }
+    this.user = FirebaseUserProvider._userDB;
   }
 
   changeListener(event): void {
     const file = event.target.files[0];
-    this.userProvider.storeImage(file);
+    this.firebaseUser.storeImage(file);
   }
 
   searchImage() {
