@@ -9,7 +9,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
-import { } from 'firebase'
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -21,6 +20,11 @@ import { RegisterPage } from '../pages/register/register';
 import { RegisterForm_1Page } from '../pages/register-form-1/register-form-1';
 import { StorageProvider } from '../providers/storage/storage';
 import { UserProvider } from '../providers/user/user';
+
+import { FaIconComponent } from '../components/fa-icon/fa-icon.component';
+import { TipsPage } from '../pages/tips/tips';
+import { FirebaseUserProvider } from '../providers/firebase-user/firebase-user';
+import { FormBuilder } from '@angular/forms';
 
 export const FIREBASE_CONFIG = {
   apiKey: "AIzaSyDvqyt20CB3JByCzF2DioRO9m7my0RaL2U",
@@ -41,7 +45,9 @@ export const FIREBASE_CONFIG = {
     AchievementsPage,
     AchievementDetailPage,
     MainPage,
-    TestPage
+    TestPage,
+    TipsPage,
+    FaIconComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +67,8 @@ export const FIREBASE_CONFIG = {
     AchievementsPage,
     AchievementDetailPage,
     MainPage,
-    TestPage
+    TestPage,
+    TipsPage
   ],
   providers: [
     StatusBar,
@@ -69,7 +76,10 @@ export const FIREBASE_CONFIG = {
     AngularFireDatabase,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     StorageProvider,
-    UserProvider
-  ]
+    UserProvider,
+    FirebaseUserProvider,
+    FormBuilder
+  ],
+  exports: [FaIconComponent]
 })
 export class AppModule { }
