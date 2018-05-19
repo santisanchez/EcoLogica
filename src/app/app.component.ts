@@ -6,8 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { TestPage } from './../pages/test/test';
-import { AchievementsPage } from './../pages/achievements/achievements';
 
 @Component({
   templateUrl: 'app.html'
