@@ -1,5 +1,7 @@
 page-login {
-    .title-container{        
+    .title-container{    
+        position: relative;
+        top: 10%;    
         .brand-title{
             font-family: TwCentMT;
             text-align: center;
@@ -22,34 +24,70 @@ page-login {
             background: color($colors, primary);
         }
     }
+
+    .inputs{
+        position: relative;
+        width: 60%;
+        display:block;
+        top: 20%;
+        margin: auto;        
+        input{
+            margin: 10px auto;            
+            border:none;
+            border-bottom: 3px solid color($colors,primary);
+            caret-color: color($colors,primary);           
+            text-align: center;
+        }
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: color($colors,primary);
+            opacity: 1;
+            text-align: center;
+        }
+    }
        
     .button-default{
-        position: relative;
+        position: absolute;
+        display: block;
         width: 50%;
-        height:40px;                
-        background : #BF0B00;
-        background : rgba(191, 11, 0, 1);
-        text-align: center;
-        margin: 0 auto;
-        top: 50px;
+        height:40px;   
+        bottom: 40px;             
+        background : color($colors,primary);        
+        text-align: center;        
+        left: 50%;
+        transform: translate(-50%, 0);
         .text-myriad{  
-            position: absolute;                      
+            position: relative;                      
             font-weight: 700;        
             font-family : Raleway;
             font-size : 18px;
-            color : #FFEBAC;
-            color : rgba(255, 235, 172, 1);   
-            left: 10%;         
-            transform: translateY(-50%);
+            color : color($colors,secondary);               
+            top: 50%;
+            transform: translateY(-50%);            
         }
-        .line{
-            position: absolute;
-            width: 83%;   
-            height: 3px; 
-            background : #FFEBAC;
-            background : rgb(231, 206, 122);
-           top: 50%;
-           left: 10%;
+        .hr {
+        display: inline-block;
         }
-    }      
+        .hr:after {
+            content: '';
+            display: block;
+            border-top: 3px solid color($colors,secondary);
+            margin-top: 0.1em;
+        }
+    }          
+
+    .validation-errors{
+        color: red;
+        font-family: Raleway;
+        font-size: 12px;
+        text-align: center;
+    }
+    .custom-alert{
+        .alert-wrapper{
+            background: color($colors,secondary);
+            .alert-head{
+                color: color($colors,primary);
+            }
+        }
+    }
+   
 }
