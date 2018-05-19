@@ -1,6 +1,5 @@
 export interface User {
-    email: string;
-    password: string;
     username: string;
-    imageUrl: string;
+    profilePhoto: string;
+    achievements: Array<Object>;
 }
