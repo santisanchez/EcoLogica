@@ -27,3 +27,59 @@
         font-family: TwCentMT;
         src: url(../assets/fonts/tw-cen-mt-condensed/tccm___.ttf);
     }
+
+    /*-----------------Alert--------------------*/
+    .custom-alert{    
+
+    .alert-head{
+        padding:0;
+    }
+    .alert-button {
+        color: color($colors, secondary) !important; // button text color
+        background-color: color($colors, primary) !important;
+        width: 40%;        
+        .button-inner{
+            justify-content: center;    
+        }
+    }
+    .alert-title{        
+        background: color($colors,primary) !important;
+        color: color($colors,secondary) !important;       
+        height: 30px;  
+        width: fit-content;      
+        font-family: Raleway;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 0;
+        line-height: 30px;
+        padding-left: 5px;
+    }
+    
+    .alert-title::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: calc(fit-content+5px);
+            border-width: 30px 0 0 30px;
+            border-color: color($colors,primary);
+            border-style:solid;
+            border-top-color:transparent;
+            border-bottom-color:transparent;
+            border-right-color:transparent;
+        }
+    .alert-sub-title{
+         color: color($colors,primary) !important;
+         padding: 20px;
+    }
+    .alert-message {
+        color: color($colors,secondary) !important; // text color for confirm alerts
+        overflow: hidden;
+        height: 100%;
+    }
+    
+
+    .alert-wrapper {
+        background-color: color($colors, secondary) !important;  // bg color of alert content
+    }
+  }
