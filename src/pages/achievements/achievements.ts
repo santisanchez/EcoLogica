@@ -1,4 +1,5 @@
-import { UserProvider } from './../../providers/user/user';
+import { User } from './../../modules/user';
+import { FirebaseUserProvider } from './../../providers/firebase-user/firebase-user';
 import { AchievementDetailPage } from './../achievement-detail/achievement-detail';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -16,27 +17,19 @@ import { LoginPage } from '../login/login';
 export class AchievementsPage {
 
   public progress: number;
-  public user: any;
+  public user: User;
 
   achievement = {} as Achievement;
   achievements: Achievement[] = [];
-  userAchievements: any = {};
 
   achievementDetail: any = AchievementDetailPage;
   login: any = LoginPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams
-    , private store: StorageProvider, private userProvider: UserProvider) {
+    , private store: StorageProvider, private firebaseUser: FirebaseUserProvider) {
     this.achievements = AchievementsData;
-    if (this.userProvider.authenticated()) {
-      this.userProvider.getUser().subscribe((response) => {
-        this.user = response;
-      }, (error) => {
-        console.error("Failed to get user" + error);
-      });
-    } else {
-      this.navCtrl.push(this.login);
-    }
+
+
   }
 
   ionViewDidLoad() {
@@ -44,7 +37,7 @@ export class AchievementsPage {
   }
 
   public showAchievementDetail(achievement, index) {
-    achievement.progress = this.user.achievements[index];
+    achievement = this.achievements[index];
     achievement.index = index;
     this.store.setData(achievement);
     this.navCtrl.push(this.achievementDetail);

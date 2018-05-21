@@ -1,37 +1,93 @@
-import { Component } from '@angular/core';
+import { AchievementsData } from './../../modules/achievements';
+import { FirebaseUserProvider } from './../../providers/firebase-user/firebase-user';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Achievement } from '../../modules/achievement';
 import { StorageProvider } from '../../providers/storage/storage';
-import { UserProvider } from '../../providers/user/user';
+import { Achievement } from '../../modules/achievement';
+import { LoginPage } from '../login/login';
+import { User } from '../../modules/user';
 
 @IonicPage()
 @Component({
-  selector: 'page-achievement-detail',
-  templateUrl: 'achievement-detail.html',
+	selector: 'page-achievement-detail',
+	templateUrl: 'achievement-detail.html',
 })
 export class AchievementDetailPage {
 
-  progressBar: any;
+	@ViewChild('progressBar') progressBarRef: ElementRef;
 
-  achievement: any = {};
+	login: any = LoginPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams
-    , private userProvider: UserProvider) {
-    this.achievement.progress = {};
-  }
+	public user: User;
 
-  ionViewDidLoad() {
-    this.progressBar = document.getElementsByClassName('progress-bar')[0];
-    this.achievement = StorageProvider.data;
-    this.progressBar.style.width = this.percentProgress() + "%";
-  }
+	progressBar: any;
 
-  percentProgress() {
-    return (this.achievement.progress.days * 21) / 100;
-  }
+	achievement = {} as Achievement;
+	achievements: Achievement[] = AchievementsData;
 
-  public startAchievement() {
-    this.userProvider.setUserAchievement("started", true, this.achievement.index);
-  }
+	userAchievement: any;
+
+	previousAchievement: string;
+	actualAchievement: string;
+	nextAchievement: string;
+
+	constructor(public navCtrl: NavController, public navParams: NavParams
+		, private firebaseUser: FirebaseUserProvider) {
+		this.userAchievement = { startDate: '', started: false };
+		this.previousAchievement = '';
+		this.nextAchievement = '';
+		this.achievement = StorageProvider.data
+	}
+
+	ionViewDidLoad() {
+		if (this.userAchievement.startDate != '') {
+			setTimeout(() => { this.progressBarRef.nativeElement.style.width = this.percentProgress() + "%"; }, 100);
+		}
+	}
+
+	ionViewDidEnter() {
+		this.achievement = StorageProvider.data;
+		if (FirebaseUserProvider._userDB == null) {
+			this.navCtrl.push(this.login);
+		}
+		else {
+			this.user = FirebaseUserProvider._userDB;
+		}
+		this.userAchievement = this.user.achievements[this.achievement.index];
+		this.previousAchievement = this.achievement.index == 0 ? this.achievements[13].image : this.achievements[this.achievement.index - 1].image;
+		this.nextAchievement = this.achievement.index == 13 ? this.achievements[0].image : this.achievements[this.achievement.index + 1].image;
+	}
+
+
+	percentProgress() {
+		console.dir(this.userAchievement);
+		let achievementStartDate = this.userAchievement.startDate == '' ? new Date() : new Date(this.userAchievement.startDate);
+		let difference = (new Date().getTime() - achievementStartDate.getTime());
+		let progress = difference / (24 * 60 * 60 * 1000);
+
+		return (progress * 100) / 21;
+	}
+
+	public startAchievement() {
+		let dateNow = new Date().toJSON();
+		let achievement = { days: 0, startDate: dateNow, started: true };
+		this.firebaseUser.setUserAchievement(achievement, this.achievement.index);
+	}
+
+	navigate(index) {
+		if (this.achievement.index == 0 && index == -1) {
+			index = 13
+		}
+		if (this.achievement.index == 13 && index == 14) {
+			index = 0
+		}
+		this.userAchievement = this.user.achievements[index];
+		this.achievement = this.achievements[index];
+		if (this.userAchievement.startDate != '') {
+			this.progressBarRef.nativeElement.style.width = this.percentProgress() + "%";
+		}
+		this.previousAchievement = this.achievement.index == 0 ? this.achievements[13].image : this.achievements[index - 1].image;
+		this.nextAchievement = this.achievement.index == 13 ? this.achievements[0].image : this.achievements[index + 1].image;
+	}
 
 }

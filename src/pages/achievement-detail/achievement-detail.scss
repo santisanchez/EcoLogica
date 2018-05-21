@@ -47,14 +47,16 @@ page-achievement-detail {
     }
     
     .progress{
-        position: relative;
+        position: absolute;
         width: 50%;
         height: 30px;        
-        margin: 0 auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+        // margin: 0 auto;
         background: color($colors,secondary);        
         .progress-bar{
             position: relative;            
-            width: 20%;
+            width: 0;
             height: 30px;
             background: color($colors,primary);                                       
         }
@@ -73,7 +75,7 @@ page-achievement-detail {
             position: absolute;
             width: 0;
             height: 0;
-            left: 100%;
+            left: 99%;
             border-width: 30px 0 0 30px;
             border-color: color($colors,primary);
             border-style:solid;
@@ -83,21 +85,76 @@ page-achievement-detail {
         }
     }
     
-    .start-achievement{
-        position: relative;        
-        width:40%;
-        height: 60px;
-        background: color($colors,primary);
-        margin: 10px auto;        
-        .text{            
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 30%;                 
-            font-family: Raleway;
-            font-weight: bold;
-            text-align: center;
-            color:color($colors,secondary);
-        }        
+    .button-default{
+        position: absolute;
+        display: block;
+        width: 40%;
+        height:40px;   
+        margin-top: 40px;           
+        background : color($colors,primary);        
+        text-align: center;        
+        left: 50%;
+        transform: translate(-50%, 0);
+        
+        .text-myriad{  
+            position: relative;                      
+            font-weight: bold;        
+            font-family : Raleway;
+            font-size : 18px;
+            color : color($colors,secondary);               
+            transform: translateY(-50%);            
+        }
+        .hr {
+        display: inline-block;
+        }
+        .hr:after {
+            content: '';
+            display: block;
+            border-top: 3px solid color($colors,secondary);
+            margin-top: 0.1em;
+        }
+    }          
+    .navigation{
+        position: absolute;
+        display: table;
+        table-layout: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);        
+        .previous-achievement{
+            display: table-cell;
+            width: 25%;
+            height: 25%;
+            background: color($colors,primary);
+            img{
+                width: 90%;
+                height: 90%;
+            }
+        }
+        .actual-achievement{
+            display: table-cell;
+            width: 25%;
+            height: 25%;
+            background: color($colors,secondary);
+            img{
+                width: 90%;
+                height: 90%;
+            }
+        }
+        .next-achievement{
+            display: table-cell;
+            width: 25%;
+            height: 25%;
+            background: color($colors,primary);
+            img{
+                width: 90%;
+                height: 90%;
+            }
+        }
+    }
+    .hide {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
     }
 }
