@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireObject } from 'angularfire2/database';
 import { FirebaseUserProvider } from '../../providers/firebase-user/firebase-user';
+import { ProgressPage } from '../progress/progress';
 
 @IonicPage()
 @Component({
@@ -15,6 +16,7 @@ export class MainPage {
 
   home: any = HomePage;
   achievements: any = AchievementsPage;
+  progress: any = ProgressPage;
 
   uid: any = "";
   public user: User;
@@ -44,6 +46,12 @@ export class MainPage {
 
   searchImage() {
     this.fileInput.click();
+  }
+
+  logout(){
+      this.firebaseUser.logout().then(()=>{
+        this.navCtrl.push(this.home);
+      });
   }
 
 }

@@ -35,6 +35,9 @@ export class FirebaseUserProvider {
       callback(false, reject);
     });
   }
+  public logout(){
+      return this.afAuth.auth.signOut();
+  }
   public register(email, password, username) {
     this.afAuth.auth.createUserWithEmailAndPassword(email, password).then((resolve) => {
       this.registerIntoDB(resolve.user.uid, username);

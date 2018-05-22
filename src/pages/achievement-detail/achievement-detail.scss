@@ -17,7 +17,7 @@ page-achievement-detail {
             margin: 0 auto;
         }
         .back-arrow{            
-            background: url('../../assets/imgs/back-arrow.png');
+            background: url('../assets/imgs/back-arrow.png');
             width: 20px;
             height: 20px;
             background-repeat: no-repeat;
@@ -116,6 +116,8 @@ page-achievement-detail {
     }          
     .navigation{
         position: absolute;
+        width: 50%;
+        height: 40px;
         display: table;
         table-layout: fixed;
         bottom: 20px;
@@ -127,8 +129,7 @@ page-achievement-detail {
             height: 25%;
             background: color($colors,primary);
             img{
-                width: 90%;
-                height: 90%;
+                width: 100%;
             }
         }
         .actual-achievement{
@@ -137,8 +138,7 @@ page-achievement-detail {
             height: 25%;
             background: color($colors,secondary);
             img{
-                width: 90%;
-                height: 90%;
+                width: 100%;
             }
         }
         .next-achievement{
@@ -147,8 +147,7 @@ page-achievement-detail {
             height: 25%;
             background: color($colors,primary);
             img{
-                width: 90%;
-                height: 90%;
+                width: 100%;
             }
         }
     }

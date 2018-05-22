@@ -27,6 +27,7 @@ import { FaIconComponent } from '../components/fa-icon/fa-icon.component';
 import { TipsPage } from '../pages/tips/tips';
 import { FirebaseUserProvider } from '../providers/firebase-user/firebase-user';
 import { FormBuilder } from '@angular/forms';
+import { ProgressPage } from '../pages/progress/progress';
 
 export const FIREBASE_CONFIG = {
   apiKey: "AIzaSyDvqyt20CB3JByCzF2DioRO9m7my0RaL2U",
@@ -50,7 +51,8 @@ export const FIREBASE_CONFIG = {
     TestPage,
     TipsPage,
     FaIconComponent,
-    DailyFormPage
+    DailyFormPage,
+    ProgressPage
   ],
   imports: [
     BrowserModule,
@@ -72,7 +74,11 @@ export const FIREBASE_CONFIG = {
     MainPage,
     TestPage,
     TipsPage,
+<<<<<<< HEAD
     DailyFormPage
+=======
+    ProgressPage
+>>>>>>> a098d6208ff88876eefc5dc26096c360b0389c2c
   ],
   providers: [
     StatusBar,
