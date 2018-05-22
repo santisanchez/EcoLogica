@@ -36,7 +36,7 @@ export class TestPage {
 
   getImageUrl() {
     this.afStorage.ref('user-photos/' + this.uid).getDownloadURL().subscribe((response) => {
-      this.user.imageUrl = response;
+     // this.user.imageUrl = response;
       console.log(response);
 
     });

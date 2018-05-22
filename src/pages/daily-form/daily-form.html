@@ -1,0 +1,107 @@
+<!--
+  Generated template for the DailyFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary" hideBackButton="true">
+      <ion-title>DIARIO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form action="">
+    <div class="question-daily">Transporte</div>
+    <div class="question">Hoy Viaje:</div>
+    <div radio-group>
+      <ion-item no-lines>
+        <ion-label>En Bus</ion-label>
+        <ion-radio item-left value="onBus"></ion-radio >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>En metro</ion-label>
+        <ion-radio item-left value="onnMetro"></ion-radio >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>En carro</ion-label>
+        <ion-radio  item-left value="onCar"></ion-radio >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>A pie</ion-label>
+        <ion-radio item-left value="onFoot"></ion-radio >
+      </ion-item>
+    </div>
+
+    <div class="question-daily">Estilo de vida</div>
+    <div class="question">Hoy:</div>
+    <div radio-group>
+      <ion-item no-lines>
+        <ion-label>No comi carne</ion-label>
+        <ion-checkbox class="checkbox-square" item-left value="noEatMeat"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Me bañe en 
+          <ion-select item-left>
+            <ion-option value=1>1</ion-option>
+          </ion-select>
+          minutos</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Separe mis residuos</ion-label>
+        <ion-checkbox  class="checkbox-square" item-left value="separeWaste"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>No use pitillo</ion-label>
+        <ion-checkbox class="checkbox-square" item-left value="noPitillo"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>No use mezclador</ion-label>
+        <ion-checkbox class="checkbox-square" item-left value="noMixer"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>No fume</ion-label>
+        <ion-checkbox class="checkbox-square" item-left value="noSmoke"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Use la bolsa de tela</ion-label>
+        <ion-checkbox class="checkbox-square" item-left value="clothBag"></ion-checkbox >
+      </ion-item>
+    </div>  
+
+    <div class="question-daily">En la U</div>
+    <div class="question">Hoy:</div>
+    <div radio-group>
+      <ion-item no-lines>
+        <ion-label>Traje mi almuerzo</ion-label>
+        <ion-checkbox class="checkbox-square" item-left value="bringLunch"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Traje compañero en mi carro</ion-label>
+        <ion-checkbox class="checkbox-square" item-left value="bringPartner"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Traje termo</ion-label>
+        <ion-checkbox  class="checkbox-square" item-left value="blingFlask"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+        <ion-label>Use el punto verde</ion-label>
+        <ion-checkbox class="checkbox-square" item-left value="greenPoint"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+          <ion-label>Traje cubiertos no desechables</ion-label>
+          <ion-checkbox class="checkbox-square" item-left value="bringCutlery"></ion-checkbox >
+      </ion-item>
+      <ion-item no-lines>
+          <ion-label>Imprimi en papel reciclado</ion-label>
+          <ion-checkbox class="checkbox-square" item-left value="recycledPaper"></ion-checkbox >
+      </ion-item>
+    </div>  
+    <button class="button-default" type="submit">
+        <h4 class="text-myriad hr">Enviar</h4>
+    </button>
+</form>
+</ion-content>
