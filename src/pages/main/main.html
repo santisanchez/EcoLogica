@@ -4,7 +4,7 @@
     </div>
     <div class="profile-info" *ngIf="user">
         <div class="image-background">
-            <!-- <img [src]="user.profilePhoto ? user.profilePhoto : '../../assets/imgs/default.jpg'" (click)="searchImage()"> -->
+            <img [src]="user.profilePhoto ? user.profilePhoto : '../../assets/imgs/default.jpg'" (click)="searchImage()">
         </div>
         <p class="user-name">{{user.username}}</p>
     </div>
@@ -28,7 +28,7 @@
                 </div>
             </ion-row>
             <ion-row>
-                <div class="main-button-veige">
+                <div class="main-button-veige" [navPush]="progress">
                     <fa-icon name="calendar" color="primary" size="2x"></fa-icon>
                     <div class="text">
                         Progreso

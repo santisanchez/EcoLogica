@@ -1,0 +1,33 @@
+<ion-content>
+
+    <div class="top-bar">
+        <div class="back-arrow" navPop></div>
+        <span class="view-name">Progreso</span>
+        <hr class="line">
+        <p class="view-explain">
+            Aqui podrás ver los días que haz realizado la acción necesaria para desbloquear el logro. Recuerda que si no registras en
+            el díario un solo día, empezarás desde cero
+        </p>
+    </div>
+    <!-- <div padding class="achievements">
+        <div *ngFor="let item of achievements;let i=index" class="achievement" (click)="showAchievementProgress(item,i)">
+            <div class="achievement">
+
+                <img src="{{item.image}}">
+            </div>
+        </div>
+    </div> -->
+    <div padding>
+        <table id="myTable" class="table achievements">
+            <tbody>
+                <tr *ngFor="let row of buildArr(achievements)">                    
+                    <td *ngFor="let item of row;let i=index" (click)="showAchievementProgress(item,i)" class="achievement">
+                            <div class="circle">{{item.days}}</div>
+                        <img #image src="{{item.image}}">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</ion-content>

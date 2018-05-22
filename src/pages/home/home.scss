@@ -26,8 +26,10 @@ page-home {
     }
         
     .button-default{
-        position: relative;
-        display: block;
+        position: relative;        
+        display: flex;
+        justify-content: center;
+        align-items: center;        
         width: 50%;
         height:40px;   
         bottom: 40px;             
@@ -37,13 +39,13 @@ page-home {
         transform: translate(-50%, 0);
         margin-bottom: 20px;
         .text-myriad{  
-            position: relative;                      
+            display: block;             
+            position: relative;         
             font-weight: bold;        
             font-family : Raleway;
             font-size : 18px;
             color : color($colors,secondary);               
-            top: 50%;
-            transform: translateY(-50%);            
+            top: 20%;                        
         }
         .hr {
         display: inline-block;

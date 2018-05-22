@@ -60,7 +60,6 @@ export class AchievementDetailPage {
 
 
 	percentProgress() {
-		console.dir(this.userAchievement);
 		let achievementStartDate = this.userAchievement.startDate == '' ? new Date() : new Date(this.userAchievement.startDate);
 		let difference = (new Date().getTime() - achievementStartDate.getTime());
 		let progress = difference / (24 * 60 * 60 * 1000);
