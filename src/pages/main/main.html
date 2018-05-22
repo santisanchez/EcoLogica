@@ -1,53 +1,55 @@
 <ion-content>
-  <div class="top-bar">
-    <span class="view-name">HOME</span>
-  </div>
-  <div class="profile-info" *ngIf="user">
-    <div class="image-background">
-      <!-- <img [src]="user.profilePhoto ? user.profilePhoto : '../../assets/imgs/default.jpg'" (click)="searchImage()"> -->
+    <div class="top-bar">
+        <span class="view-name">HOME</span>
     </div>
-    <p class="user-name">{{user.username}}</p>
-  </div>
-  <input id="file-input" class="file-input" name="file-input" type="file" accept=".jpg, .jpeg, .png" (change)="changeListener($event)">
-  <div class="navigation-buttons">
-    <ion-grid>
-      <ion-row>
-        <div class="main-button-red" [navPush]="achievements">
-          <fa-icon name="star-o" color="secondary" size="2x"></fa-icon>
-          <div class="text">
-            Logros
-          </div>
-          <hr>
+    <div class="profile-info" *ngIf="user">
+        <div class="image-background">
+            <!-- <img [src]="user.profilePhoto ? user.profilePhoto : '../../assets/imgs/default.jpg'" (click)="searchImage()"> -->
         </div>
-        <div class="main-button-red">
-          <fa-icon name="check-square-o" color="secondary" size="2x"></fa-icon>
-          <div class="text">
-            Diario
-          </div>
-          <hr>
-        </div>
-      </ion-row>
-      <ion-row>
-        <div class="main-button-veige">
-          <fa-icon name="calendar" color="primary" size="2x"></fa-icon>
-          <div class="text">
-            Progreso
-          </div>
-          <hr>
-        </div>
-        <div class="main-button-veige">
-          <fa-icon name="lightbulb-o" color="primary" size="2x"></fa-icon>
-          <div class="text hr">
-            Tips
-          </div>
-          <hr>
-        </div>
-      </ion-row>
-    </ion-grid>
-  </div>
+        <p class="user-name">{{user.username}}</p>
+    </div>
+    <input id="file-input" class="file-input" name="file-input" type="file" accept=".jpg, .jpeg, .png" (change)="changeListener($event)">
+    <div class="navigation-buttons">
+        <ion-grid>
+            <ion-row>
+                <div class="main-button-red" [navPush]="achievements">
+                    <fa-icon name="star-o" color="secondary" size="2x"></fa-icon>
+                    <div class="text">
+                        Logros
+                    </div>
+                    <hr>
+                </div>
+                <div class="main-button-red">
+                    <fa-icon name="check-square-o" color="secondary" size="2x"></fa-icon>
+                    <div class="text">
+                        Diario
+                    </div>
+                    <hr>
+                </div>
+            </ion-row>
+            <ion-row>
+                <div class="main-button-veige">
+                    <fa-icon name="calendar" color="primary" size="2x"></fa-icon>
+                    <div class="text">
+                        Progreso
+                    </div>
+                    <hr>
+                </div>
+                <div class="main-button-veige">
+                    <fa-icon name="lightbulb-o" color="primary" size="2x"></fa-icon>
+                    <div class="text hr">
+                        Tips
+                    </div>
+                    <hr>
+                </div>
+            </ion-row>
+        </ion-grid>
+    </div>
 </ion-content>
 <ion-footer>
-  <div class="top-bar">
-
-  </div>
+    <div class="bottom-bar">
+        <div class="buttons" (click)="logout()">
+            <fa-icon name="sign-out" color="secondary" size="2x"></fa-icon>
+        </div>
+    </div>
 </ion-footer>
