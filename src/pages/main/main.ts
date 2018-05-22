@@ -46,4 +46,10 @@ export class MainPage {
     this.fileInput.click();
   }
 
+  logout(){
+      this.firebaseUser.logout().then(()=>{
+        this.navCtrl.push(this.home);
+      });
+  }
+
 }
