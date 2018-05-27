@@ -7,101 +7,107 @@
 <ion-header>
 
   <ion-navbar color="primary" hideBackButton="true">
+      <div class="back-arrow" navPop></div>
       <ion-title>DIARIO</ion-title>
   </ion-navbar>
 
 </ion-header>
-
-
 <ion-content padding>
-  <form action="">
-    <div class="question-daily">Transporte</div>
-    <div class="question">Hoy Viaje:</div>
-    <div radio-group>
-      <ion-item no-lines>
-        <ion-label>En Bus</ion-label>
-        <ion-radio item-left value="onBus"></ion-radio >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>En metro</ion-label>
-        <ion-radio item-left value="onnMetro"></ion-radio >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>En carro</ion-label>
-        <ion-radio  item-left value="onCar"></ion-radio >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>A pie</ion-label>
-        <ion-radio item-left value="onFoot"></ion-radio >
-      </ion-item>
-    </div>
+      <ion-grid>
+        <ion-row>
+          <form [formGroup]="formGroup" (ngSubmit)="saveData()" class="inputs" #formDirDaily="ngForm"
+          id="formDirDaily">
+            <ion-grid>
+              <div class="question-daily">Transporte</div>
+              <div class="question">Hoy Viaje:</div>
+              <ion-list radio-group formControlName="transport" [(ngModel)]="transport">
+                <ion-item>
+                  <ion-label>En Bus</ion-label>
+                  <ion-radio value="onBus"></ion-radio >
+                </ion-item>
+                <ion-item>
+                  <ion-label>En metro</ion-label>
+                  <ion-radio value="onMetro"></ion-radio >
+                </ion-item>
+                <ion-item>
+                  <ion-label>En carro</ion-label>
+                  <ion-radio  value="onCar"></ion-radio >
+                </ion-item>
+                <ion-item>
+                  <ion-label>A pie</ion-label>
+                  <ion-radio value="onFoot"></ion-radio >
+                </ion-item>
+              </ion-list>
 
-    <div class="question-daily">Estilo de vida</div>
-    <div class="question">Hoy:</div>
-    <div radio-group>
-      <ion-item no-lines>
-        <ion-label>No comi carne</ion-label>
-        <ion-checkbox class="checkbox-square" item-left value="noEatMeat"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>Me bañe en 
-          <ion-select item-left>
-            <ion-option value=1>1</ion-option>
-          </ion-select>
-          minutos</ion-label>
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>Separe mis residuos</ion-label>
-        <ion-checkbox  class="checkbox-square" item-left value="separeWaste"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>No use pitillo</ion-label>
-        <ion-checkbox class="checkbox-square" item-left value="noPitillo"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>No use mezclador</ion-label>
-        <ion-checkbox class="checkbox-square" item-left value="noMixer"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>No fume</ion-label>
-        <ion-checkbox class="checkbox-square" item-left value="noSmoke"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>Use la bolsa de tela</ion-label>
-        <ion-checkbox class="checkbox-square" item-left value="clothBag"></ion-checkbox >
-      </ion-item>
-    </div>  
+              <div class="question-daily">Estilo de vida</div>
+              <div class="question">Hoy:</div>
+              <ion-item>
+                <ion-label>No Comi Carne</ion-label>
+                <ion-checkbox formControlName="noEatMeat" [(ngModel)]="noEatMeat"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label> Me bañe en </ion-label>
+                  <ion-select formControlName="showerTime" [(ngModel)]="showerTime">
+                    <ion-option value=1 selected>1 minuto</ion-option>
+                  </ion-select>
+              </ion-item>
+              <ion-item>
+                <ion-label>Separe mis residuos</ion-label>
+                <ion-checkbox formControlName="separeWaste" [(ngModel)]="separeWaste"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>No use pitillo</ion-label>
+                <ion-checkbox formControlName="noPitillo" [(ngModel)]="noPitillo"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>No use Mezclador</ion-label>
+                <ion-checkbox formControlName="noMixer" [(ngModel)]="noMixer"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>No fume</ion-label>
+                <ion-checkbox formControlName="noSmoke" [(ngModel)]="noSmoke"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Use la bolsa de tela</ion-label>
+                <ion-checkbox formControlName="clothBag" [(ngModel)]="clothBag"></ion-checkbox>
+              </ion-item>
 
-    <div class="question-daily">En la U</div>
-    <div class="question">Hoy:</div>
-    <div radio-group>
-      <ion-item no-lines>
-        <ion-label>Traje mi almuerzo</ion-label>
-        <ion-checkbox class="checkbox-square" item-left value="bringLunch"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>Traje compañero en mi carro</ion-label>
-        <ion-checkbox class="checkbox-square" item-left value="bringPartner"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>Traje termo</ion-label>
-        <ion-checkbox  class="checkbox-square" item-left value="blingFlask"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-        <ion-label>Use el punto verde</ion-label>
-        <ion-checkbox class="checkbox-square" item-left value="greenPoint"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-          <ion-label>Traje cubiertos no desechables</ion-label>
-          <ion-checkbox class="checkbox-square" item-left value="bringCutlery"></ion-checkbox >
-      </ion-item>
-      <ion-item no-lines>
-          <ion-label>Imprimi en papel reciclado</ion-label>
-          <ion-checkbox class="checkbox-square" item-left value="recycledPaper"></ion-checkbox >
-      </ion-item>
-    </div>  
-    <button class="button-default" type="submit">
-        <h4 class="text-myriad hr">Enviar</h4>
-    </button>
-</form>
+              <div class="question-daily">En la U</div>
+              <div class="question">Hoy:</div>
+              
+              <ion-item>
+                <ion-label>Traje mi almuerzo</ion-label>
+                <ion-checkbox formControlName="bringLunch" [(ngModel)]="bringLunch"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Traje compañero en mi carro</ion-label>
+                <ion-checkbox formControlName="bringPartner" [(ngModel)]="bringPartner"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Traje termo</ion-label>
+                  <ion-checkbox formControlName="bringFlask" [(ngModel)]="bringFlask"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Use el punto verde</ion-label>
+                <ion-checkbox formControlName="greenPoint" [(ngModel)]="greenPoint"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                  <ion-label>Traje cubiertos no desechables</ion-label>
+                  <ion-checkbox formControlName="bringCutlery" [(ngModel)]="bringCutlery"></ion-checkbox>
+              </ion-item>
+              <ion-item>
+                <ion-label>Imprimi en papel reciclado</ion-label>
+                <ion-checkbox formControlName="recycledPaper" [(ngModel)]="recycledPaper"></ion-checkbox>
+              </ion-item>
+
+            </ion-grid>
+          </form>
+        </ion-row>
+        <ion-row>
+          <button class="button-default" type="submit" form="formDirDaily">
+            <h4 class="text-myriad hr">Enviar</h4>
+          </button>
+        </ion-row>
+      </ion-grid>
+    
 </ion-content>

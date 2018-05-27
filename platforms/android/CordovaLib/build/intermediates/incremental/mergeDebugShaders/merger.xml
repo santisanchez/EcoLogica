@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Koro_\Desktop\EcoLogica\platforms\android\CordovaLib\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\Koro_\Desktop\EcoLogica\platforms\android\CordovaLib\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/josuef/Escritorio/EcoLogica/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/josuef/Escritorio/EcoLogica/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>

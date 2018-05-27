@@ -1,20 +1,17 @@
-
-
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//import { DailyFormPage } from './../pages/daily-form/daily-form';
 import { HomePage } from '../pages/home/home';
-import { DailyFormPage } from '../pages/daily-form/daily-form';
-import { AchievementsPage } from './../pages/achievements/achievements';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = DailyFormPage;
+  rootPage: any = HomePage;
 
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {

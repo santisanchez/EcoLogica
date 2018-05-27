@@ -74,11 +74,8 @@ export const FIREBASE_CONFIG = {
     MainPage,
     TestPage,
     TipsPage,
-<<<<<<< HEAD
-    DailyFormPage
-=======
+    DailyFormPage,
     ProgressPage
->>>>>>> a098d6208ff88876eefc5dc26096c360b0389c2c
   ],
   providers: [
     StatusBar,
