@@ -2,37 +2,46 @@
     <div class="back-arrow" navPop></div>
     <span class="view-name">LOGROS</span>
 </div>
-<div class="image-background">
-    <img [src]="achievements[achievement.index].image">
+<div class="animated infinite" id="content" #content>
+    <div class="image-background">
+        <img [src]="achievements[achievement.index].image">
+    </div>
+    <p class="achievement-title">{{achievement.title}}</p>
+
+    <ion-grid>
+        <ion-row>
+            <div [ngClass]="[userAchievement.startDate == '' ? 'hide' : 'progress']">
+                <div #progressBar id="progressBar" class="progress-bar">
+                </div>
+                <span class="text">En progreso</span>
+
+            </div>
+        </ion-row>
+        <ion-row>
+            <button class="button-default" *ngIf="userAchievement.startDate == ''" (click)="startAchievement()">
+                <h4 class="text-myriad hr">Empezar</h4>
+            </button>
+        </ion-row>
+    </ion-grid>
 </div>
-<p class="achievement-title">{{achievement.title}}</p>
+
+
 <ion-grid>
     <ion-row>
-        <!--  -->
-        <div [ngClass]="[userAchievement.startDate == '' ? 'hide' : 'progress']">
-            <div #progressBar id="progressBar" class="progress-bar">
-            </div>
-            <span class="text">En progreso</span>
-            <!-- <div class=""></div> -->
-        </div>
-    </ion-row>
-    <ion-row>
-        <!--  -->
-        <button class="button-default" *ngIf="userAchievement.startDate == ''" (click)="startAchievement()">
-            <h4 class="text-myriad hr">Empezar</h4>
-        </button>
-    </ion-row>
-    <ion-row>
         <div class="navigation">
-            <div class="previous-achievement" (click)="navigate(achievement.index-1)">
+
+            <div class="previous-achievement" (click)="navigate(achievement.index-1,'previous')">
+                <!-- <fa-icon name="chevron-left" color="secondary" size="3x"></fa-icon> -->
                 <img [src]="previousAchievement">
             </div>
             <div class="actual-achievement">
                 <img [src]="achievements[achievement.index].image">
             </div>
-            <div class="next-achievement" (click)="navigate(achievement.index+1)">
+            <div class="next-achievement" (click)="navigate(achievement.index+1,'next')">
                 <img [src]="nextAchievement">
+                <!-- <fa-icon name="chevron-right" color="secondary" size="3x"></fa-icon> -->
             </div>
+
         </div>
     </ion-row>
 </ion-grid>
