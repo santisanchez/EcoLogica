@@ -31,15 +31,12 @@ export class AchievementDetailPage {
     actualAchievement: string;
     nextAchievement: string;
 
-    content: any;
-
     constructor(public navCtrl: NavController, public navParams: NavParams
         , private firebaseUser: FirebaseUserProvider) {
         this.userAchievement = { startDate: '', started: false };
         this.previousAchievement = '';
         this.nextAchievement = '';
         this.achievement = StorageProvider.data
-
     }
 
     ionViewDidLoad() {
