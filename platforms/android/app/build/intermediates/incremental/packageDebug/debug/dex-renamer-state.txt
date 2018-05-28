@@ -1,4 +1,4 @@
-#Sun May 27 20:35:53 COT 2018
+#Sun May 27 21:05:09 COT 2018
 base.0=/home/josuef/Escritorio/EcoLogica/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 file.0=/home/josuef/Escritorio/EcoLogica/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

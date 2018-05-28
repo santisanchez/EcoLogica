@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun May 27 20:35:54 COT 2018
+#Sun May 27 21:05:11 COT 2018
 122.file=/home/josuef/Escritorio/EcoLogica/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/res/drawable-port-xxhdpi-v4/screen.png
 60.set=ASSET
 129.file=/home/josuef/Escritorio/EcoLogica/platforms/android/app/build/intermediates/assets/debug/www/build/0.js.map

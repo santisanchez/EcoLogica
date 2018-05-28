@@ -38,7 +38,7 @@
               <ion-item>
                 <ion-label> Me bañe en </ion-label>
                   <ion-select formControlName="showerTime" [(ngModel)]="showerTime">
-                    <ion-option value=1 selected>1 minuto</ion-option>
+                    <ion-option *ngFor="let item of timeShower;let i=index" value={{item.value}} selected>{{item.text}}</ion-option>
                   </ion-select>
               </ion-item>
               <ion-item>
