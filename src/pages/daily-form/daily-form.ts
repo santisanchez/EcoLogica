@@ -38,12 +38,58 @@ export class DailyFormPage {
   public bringCutlery: boolean;
   public recycledPaper:boolean;
 
+  public timeShower=[
+    {value:1,text: "1 minuto"},
+    {value:2,text: "2 minutos"},
+    {value:3,text: "3 minutos"},
+    {value:4,text: "4 minutos"},
+    {value:5,text: "5 minutos"},
+    {value:6,text: "6 minutos"},
+    {value:7,text: "7 minutos"},
+    {value:8,text: "8 minutos"},
+    {value:9,text: "9 minutos"},
+    {value:10,text: "10 minutos"},
+    {value:11,text: "11 minutos"},
+    {value:12,text: "12 minutos"},
+    {value:13,text: "13 minutos"},
+    {value:14,text: "14 minutos"},
+    {value:15,text: "15 minutos"},
+    {value:16,text: "16 minutos"},
+    {value:17,text: "17 minutos"},
+    {value:18,text: "18 minutos"},
+    {value:19,text: "19 minutos"},
+    {value:20,text: "20 minutos"},
+    {value:21,text: "21 minutos"},
+    {value:22,text: "22 minutos"},
+    {value:23,text: "23 minutos"},
+    {value:24,text: "24 minutos"},
+    {value:25,text: "25 minutos"},
+    {value:26,text: "26 minutos"},
+    {value:27,text: "27 minutos"},
+    {value:28,text: "28 minutos"},
+    {value:29,text: "29 minutos"},
+    {value:30,text: "30 minutos"},
+    {value:100,text: "+ de 30 minutos"},
+  ];
+
 	//achievement = {} as Achievement;
   //achievements: Achievement[] = AchievementsData;
   
   constructor(public navCtrl: NavController, public navParams: NavParams,private formBuilder: FormBuilder,private firebaseUser:FirebaseUserProvider) {
     this.validationMessages = {};
     this.setValidations();  
+    this.noEatMeat=false;
+    this.separeWaste=false;
+    this.noPitillo=false;
+    this.noMixer=false;
+    this.noSmoke=false;
+    this.clothBag=false;
+    this.bringCutlery=false;
+    this.bringFlask=false;
+    this.bringLunch=false;
+    this.bringPartner=false;
+    this.greenPoint=false;
+    this.recycledPaper=false;
 	//	this.achievement = StorageProvider.data      
   }
 
