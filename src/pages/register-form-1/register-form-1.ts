@@ -1,6 +1,6 @@
+import { FirebaseUserProvider } from './../../providers/firebase-user/firebase-user';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
 /**
  * Generated class for the RegisterForm_1Page page.
  *

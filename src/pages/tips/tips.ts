@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TipsData } from './../../modules/tips';
+import { Tip } from './../../modules/tip';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
 
 /**
  * Generated class for the TipsPage page.
@@ -15,11 +17,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TipsPage {
 
+
+  tip = {} as Tip;
+  tips: Tip[] = [];
+  @ViewChild(Slides) slides: Slides;
+
+  nextSlide(){
+    this.slides.slideNext();
+  }
+  prevSlide(){
+    this.slides.slidePrev();
+  }
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.tips=TipsData;
   }
 
   ionViewDidLoad() {
-
   }
 
 }

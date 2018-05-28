@@ -1,7 +1,9 @@
+import { Achievement } from './../modules/achievement';
 import { MainPage } from './../pages/main/main';
 import { TestPage } from './../pages/test/test';
 import { AchievementDetailPage } from './../pages/achievement-detail/achievement-detail';
 import { AchievementsPage } from './../pages/achievements/achievements';
+import { DailyFormPage } from '../pages/daily-form/daily-form';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -49,6 +51,7 @@ export const FIREBASE_CONFIG = {
     TestPage,
     TipsPage,
     FaIconComponent,
+    DailyFormPage,
     ProgressPage
   ],
   imports: [
@@ -71,6 +74,7 @@ export const FIREBASE_CONFIG = {
     MainPage,
     TestPage,
     TipsPage,
+    DailyFormPage,
     ProgressPage
   ],
   providers: [

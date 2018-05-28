@@ -3,9 +3,9 @@
         <span class="view-name">HOME</span>
     </div>
     <div class="profile-info" *ngIf="user">
-        <div class="image-background">
+        <!--div class="image-background">
             <img [src]="user.profilePhoto ? user.profilePhoto : '../../assets/imgs/default.jpg'" (click)="searchImage()">
-        </div>
+        </div-->
         <p class="user-name">{{user.username}}</p>
     </div>
     <input id="file-input" class="file-input" name="file-input" type="file" accept=".jpg, .jpeg, .png" (change)="changeListener($event)">
@@ -19,7 +19,7 @@
                     </div>
                     <hr>
                 </div>
-                <div class="main-button-red">
+                <div class="main-button-red"  [navPush]="daily">
                     <fa-icon name="check-square-o" color="secondary" size="2x"></fa-icon>
                     <div class="text">
                         Diario
@@ -35,7 +35,7 @@
                     </div>
                     <hr>
                 </div>
-                <div class="main-button-veige">
+                <div class="main-button-veige"  [navPush]="tips">
                     <fa-icon name="lightbulb-o" color="primary" size="2x"></fa-icon>
                     <div class="text hr">
                         Tips
