@@ -1,4 +1,4 @@
-<ion-content padding>
+<ion-content>
     <div class="top-bar">
         <div class="back-arrow" navPop></div>
         <span class="view-name">TIPS</span>
@@ -6,9 +6,13 @@
     <ion-slides>
       <ion-slide *ngFor="let item of tips;let i=index">
         <div>
-          <fa-icon name="chevron-left" color="primary"  (click)=prevSlide()></fa-icon>
+          <span style="bottom: 55%; left:2%; position: absolute;">
+            <fa-icon name="chevron-left" color="primary" size="3x"  (click)=prevSlide()></fa-icon>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+          </span>
           <img class="imgTip" src="{{item.image}}" alt="">
-          <fa-icon name="chevron-right" color="primary"  (click)=nextSlide()></fa-icon>
+          <span style="bottom: 55%; right: 2%; position: absolute;"                                                                                                                                                                  >
+            <fa-icon name="chevron-right" color="primary" size="3x" (click)=nextSlide()></fa-icon>
+          </span>
         </div>
         <h1 class="title">{{item.title}}</h1>    
         <p>{{item.text}}</p>

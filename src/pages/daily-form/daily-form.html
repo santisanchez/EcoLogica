@@ -1,4 +1,4 @@
-<ion-content padding>
+<ion-content>
     <div class="top-bar">
         <div class="back-arrow" navPop></div>
         <span class="view-name">Diario</span>
@@ -8,8 +8,10 @@
           <form [formGroup]="formGroup" (ngSubmit)="saveData()" class="inputs" #formDirDaily="ngForm"
           id="formDirDaily">
             <ion-grid>
-              <div class="question-daily">Transporte</div>
-              <div class="question">Hoy Viaje:</div>
+              <div class="container-div">
+                <div class="question-daily">Transporte</div>
+                <div class="question">Hoy Viaje:</div>
+              </div>
               <ion-list radio-group formControlName="transport" [(ngModel)]="transport">
                 <ion-item>
                   <ion-label>En Bus</ion-label>
@@ -28,9 +30,10 @@
                   <ion-radio value="onFoot"></ion-radio >
                 </ion-item>
               </ion-list>
-
-              <div class="question-daily">Estilo de vida</div>
-              <div class="question">Hoy:</div>
+              <div class="container-div">              
+                <div class="question-daily">Estilo de vida</div>
+                <div class="question">Hoy:</div>
+              </div>
               <ion-item>
                 <ion-label>No Comi Carne</ion-label>
                 <ion-checkbox formControlName="noEatMeat" [(ngModel)]="noEatMeat"></ion-checkbox>
@@ -62,9 +65,10 @@
                 <ion-checkbox formControlName="clothBag" [(ngModel)]="clothBag"></ion-checkbox>
               </ion-item>
 
-              <div class="question-daily">En la U</div>
-              <div class="question">Hoy:</div>
-              
+              <div class="container-div">              
+                <div class="question-daily">En la U</div>
+                <div class="question">Hoy:</div>
+              </div>
               <ion-item>
                 <ion-label>Traje mi almuerzo</ion-label>
                 <ion-checkbox formControlName="bringLunch" [(ngModel)]="bringLunch"></ion-checkbox>

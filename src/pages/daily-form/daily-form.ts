@@ -105,7 +105,7 @@ export class DailyFormPage {
         let calculatedDay: number= this.calculateDays(currentDate,achievement);
         console.log(calculatedDay);
         currentDays+=1;
-        if(currentDays==calculatedDay){
+        if(currentDays==calculatedDay || (currentDays-1)==calculatedDay){
           switch(index){
             case 0:
             if(this.formGroup.value.noSmoke==true)
@@ -153,13 +153,13 @@ export class DailyFormPage {
             }
             break;
             case 5:
-            /*if(this.formGroup.value.recycledPaper==true)
+            if(this.formGroup.value.recycledPaper==true)
             {
               newAchievement={ days: calculatedDay, startDate: achievement.startDate, started: true };
             }
             else{
               newAchievement={ days: 0, startDate: currentDate, started: true };                
-            }*/
+            }
             break;
             case 6:
             if(this.formGroup.value.bringPartner==true)
@@ -271,11 +271,11 @@ export class DailyFormPage {
               newAchievement={ days: 1, startDate: currentDate, started: true };
             }
           break;
-          case 5:/*
-            if(this.formGroup.value.recycledPaper==true)
+          case 5:
+            (this.formGroup.value.recycledPaper==true)
             {
               newAchievement={ days: 1, startDate: currentDate, started: true };
-            }*/
+            }
           break;
           case 6:
             if(this.formGroup.value.bringPartner==true)
