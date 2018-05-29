@@ -1,7 +1,16 @@
 page-register {
-    height: 100%;
+
+    ion-content{
+        height: 100%;
+        width: 100%;
+    }
+    
     .title-container{     
         position: relative;
+        // display: inline-block;
+        margin: 0 auto;
+        // left: 50%;
+        // transform: translate(-50%,0);           
         top: 10%;   
         .brand-title{
             font-family: TwCentMT;
@@ -20,20 +29,18 @@ page-register {
             padding-top: -30px;
         }
         .brand-line{
-            width: 50%;   
+            width: 60%;   
             height: 4px; 
             background: color($colors, primary);
         }
     }  
 
     .inputs{
-        position: absolute;
-        width: 60%;
-        display:block;
+        position: relative;
+        width: 60%;        
         bottom: 10%;
-        margin: 20px auto;     
-        left: 50%;
-        transform: translate(-50%,0);   
+        margin: 50px auto 20px auto;              
+      
         input{
             margin: 10px auto;            
             border:none;
@@ -50,7 +57,7 @@ page-register {
     }
                
     .button-default{
-        position: absolute;
+        position: relative;
         display: block;
         width: 50%;
         height:40px;   
