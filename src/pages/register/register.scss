@@ -6,12 +6,9 @@ page-register {
     }
     
     .title-container{     
-        position: relative;
-        // display: inline-block;
-        margin: 0 auto;
-        // left: 50%;
-        // transform: translate(-50%,0);           
-        top: 10%;   
+        position: relative;        
+        margin: 10% auto;        
+        text-align: center;
         .brand-title{
             font-family: TwCentMT;
             text-align: center;
@@ -20,30 +17,36 @@ page-register {
             margin: 0;
             line-height: 130px;
         }
-        .brand-subtitle{
+        .brand-subtitle{            
+            position: relative;        
+            margin: 0 auto;     
             font-family: Raleway;
             text-align: center;
             font-size: 47px;
             margin: 0;
             color: #3d3d3d;
-            padding-top: -30px;
+            padding-top: -30px;            
         }
-        .brand-line{
-            width: 60%;   
-            height: 4px; 
-            background: color($colors, primary);
+        .hr {
+        display: inline-block;
+        }
+        .hr:after {
+            content: '';
+            display: block;
+            border-top: 3px solid color($colors,primary);
+            background: color($colors,primary);
+            margin-top: 0.1em;
         }
     }  
 
     .inputs{
         position: relative;
-        width: 60%;        
-        bottom: 10%;
-        margin: 50px auto 20px auto;              
-      
+        width: 100%;        
+        margin: 10% auto 15% auto;      
         input{
-            margin: 10px auto;            
+            margin: 5% auto;            
             border:none;
+            width: 60%;
             border-bottom: 3px solid color($colors,primary);
             caret-color: color($colors,primary);           
             text-align: center;        
