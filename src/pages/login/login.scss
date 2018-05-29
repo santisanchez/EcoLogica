@@ -1,39 +1,9 @@
 page-login {
-    // position: absolute;
-    // width: 100%;
-    // min-height: 100%;
-    // .title-container{    
-    //     position: relative;
-    //     top: 10%;    
-    //     .brand-title{
-    //         font-family: TwCentMT;
-    //         text-align: center;
-    //         font-size: 190px;                        
-    //         color: #3d3d3d;
-    //         margin: 0;
-    //         line-height: 130px;
-    //     }
-    //     .brand-subtitle{
-    //         font-family: Raleway;
-    //         text-align: center;
-    //         font-size: 47px;
-    //         margin: 0;
-    //         color: #3d3d3d;
-    //         padding-top: -30px;
-    //     }
-    //     .brand-line{
-    //         width: 50%;   
-    //         height: 4px; 
-    //         background: color($colors, primary);
-    //     }
-    // }
-.title-container{     
-        position: relative;
-        // display: inline-block;
-        margin: 0 auto;
-        // left: 50%;
-        // transform: translate(-50%,0);           
-        top: 10%;   
+    
+    .title-container{     
+        position: relative;        
+        margin: 10% auto;        
+        text-align: center;
         .brand-title{
             font-family: TwCentMT;
             text-align: center;
@@ -42,26 +12,34 @@ page-login {
             margin: 0;
             line-height: 130px;
         }
-        .brand-subtitle{
+        .brand-subtitle{            
+            position: relative;        
+            margin: 0 auto;     
             font-family: Raleway;
             text-align: center;
             font-size: 47px;
             margin: 0;
             color: #3d3d3d;
-            padding-top: -30px;
+            padding-top: -30px;            
         }
-        .brand-line{
-            width: 60%;   
-            height: 4px; 
-            background: color($colors, primary);
+        .hr {
+        display: inline-block;
+        }
+        .hr:after {
+            content: '';
+            display: block;
+            border-top: 3px solid color($colors,primary);
+            background: color($colors,primary);
+            margin-top: 0.1em;
         }
     }  
     .inputs{
         position: relative;
-        width: 60%;                
-        margin: 100px auto 20px auto;                    
+        width: 100%;                
+        margin: 20% auto 15% auto;                      
         input{
-            margin: 10px auto;            
+            width: 60%;
+            margin: 5% auto;            
             border:none;
             border-bottom: 3px solid color($colors,primary);
             caret-color: color($colors,primary);           
