@@ -1,10 +1,39 @@
 page-login {
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-    .title-container{    
+    // position: absolute;
+    // width: 100%;
+    // min-height: 100%;
+    // .title-container{    
+    //     position: relative;
+    //     top: 10%;    
+    //     .brand-title{
+    //         font-family: TwCentMT;
+    //         text-align: center;
+    //         font-size: 190px;                        
+    //         color: #3d3d3d;
+    //         margin: 0;
+    //         line-height: 130px;
+    //     }
+    //     .brand-subtitle{
+    //         font-family: Raleway;
+    //         text-align: center;
+    //         font-size: 47px;
+    //         margin: 0;
+    //         color: #3d3d3d;
+    //         padding-top: -30px;
+    //     }
+    //     .brand-line{
+    //         width: 50%;   
+    //         height: 4px; 
+    //         background: color($colors, primary);
+    //     }
+    // }
+.title-container{     
         position: relative;
-        top: 10%;    
+        // display: inline-block;
+        margin: 0 auto;
+        // left: 50%;
+        // transform: translate(-50%,0);           
+        top: 10%;   
         .brand-title{
             font-family: TwCentMT;
             text-align: center;
@@ -22,38 +51,33 @@ page-login {
             padding-top: -30px;
         }
         .brand-line{
-            width: 50%;   
+            width: 60%;   
             height: 4px; 
             background: color($colors, primary);
         }
-    }
-
+    }  
     .inputs{
         position: relative;
-        width: 100%;
-        display:block;        
-        top: 20%;
-        margin: auto;                
+        width: 60%;                
+        margin: 100px auto 20px auto;                    
         input{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px auto;            
+            margin: 10px auto;            
             border:none;
             border-bottom: 3px solid color($colors,primary);
             caret-color: color($colors,primary);           
-            text-align: center;
+            text-align: center;        
         }
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        ::placeholder {
             color: color($colors,primary);
-            opacity: 1;
+            opacity: 0.25;
+            font-weight: bold;            
             text-align: center;
         }
     }
        
   
     .button-default{
-        position: absolute;
+        position: relative;
         display: block;
         width: 50%;
         height:40px;   
